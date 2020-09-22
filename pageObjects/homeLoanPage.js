@@ -1,0 +1,25 @@
+module.exports={
+    url:'http://localhost:3000/#/',
+    elements:{
+        getStartedBtn:'.home-btn',
+        loanTypes:'#loanTypes',
+        propTypes:'#propertyTypes',
+        cityInput:'[name="city"]',
+        button:{
+            selector:'//button',
+            locateStrategy:'xpath'
+        },
+        priceInput:'[name="price"]',
+        downInput:'[name="down"]',
+        addressOne:'#addressOne',
+        addressTwo:'#addressTwo',
+        addressThree:'#addressThree',
+        firstName:'#first',
+        lastName:'#last',
+        email:'#email',
+        restartBtn:{
+            selector:'//*[@name="restartButton"]',
+            locateStrategy:'xpath'
+        }
+    }
+}
