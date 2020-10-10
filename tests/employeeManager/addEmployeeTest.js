@@ -1,3 +1,10 @@
+var callbackPrac= (browser)=>{browser.
+    getText('#employeeID',function(result){let idNumber = Number(result.value.slice(3))
+browser
+    .verify.ok(idNumber > 0, `The ID (${idNumber}) is a positive number.`)
+    .verify.ok(idNumber % 1 === 0, `The ID (${idNumber}) is a whole number.`)
+})}
+
 module.exports={
     before:browser=>{
         browser.url('https://devmountain-qa.github.io/employee-manager/1.2_Version/index.html')
@@ -19,7 +26,6 @@ module.exports={
         var inputPhone = 'input[name="phoneEntry"]'
         var inputTitle = 'input[name="titleEntry"]'
 
-
         browser
             .click(addEmployeeButton)
             .click('li[name="employee11"]')
@@ -40,6 +46,6 @@ module.exports={
             .verify.valueContains(inputName,newEmployee.employeeName)
             .verify.valueContains(inputPhone,newEmployee.employeePhone)
             .verify.valueContains(inputTitle,newEmployee.employeeTitle)
-        
+        callbackPrac(browser)
     }
 }
