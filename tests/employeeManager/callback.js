@@ -46,6 +46,6 @@ module.exports={
             .verify.valueContains(inputName,newEmployee.employeeName)
             .verify.valueContains(inputPhone,newEmployee.employeePhone)
             .verify.valueContains(inputTitle,newEmployee.employeeTitle)
-        callbackPrac(browser)
+            callbackPrac(browser)
     }
 }
